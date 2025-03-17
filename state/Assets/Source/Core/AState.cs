@@ -2,24 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class AState
+namespace Core
 {
-    protected StateMachine _stateMachine;
-
-    protected AState(StateMachine stateMachine)
+    public abstract class AState
     {
-        _stateMachine = stateMachine;
-  
+        protected StateMachine<AState> _stateMachine;
+
+        protected AState(StateMachine<AState> stateMachine)
+        {
+            _stateMachine = stateMachine;
+        }
+
+        public abstract void Enter();
+
+        public abstract void Exit();
+
+        public abstract void Update();
     }
-
-    public virtual string GetStateName()
-    {
-        return GetType().Name; 
-    }
-
-    public abstract void Enter();
-
-    public abstract void Exit();
-
-    public abstract void Update();
 }

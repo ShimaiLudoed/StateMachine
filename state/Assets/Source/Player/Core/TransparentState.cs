@@ -1,13 +1,14 @@
+using Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TransparentState : AState
+public class TransparentState : AState, INameDebugger
 {
   private readonly SpriteRenderer _spriteRenderer;
   private bool _isTransparent;
 
-  public TransparentState(StateMachine stateMachine, SpriteRenderer spriteRenderer) : base(stateMachine)
+  public TransparentState(StateMachine<AState> stateMachine, SpriteRenderer spriteRenderer) : base(stateMachine)
   {
     _spriteRenderer = spriteRenderer;
   }

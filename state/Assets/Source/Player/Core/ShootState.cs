@@ -1,10 +1,11 @@
+using Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootState : AState
+public class ShootState : AState, INameDebugger
 {
-  public ShootState(StateMachine stateMachine) : base(stateMachine) { }
+  public ShootState(StateMachine<AState> stateMachine) : base(stateMachine) { }
 
   public override void Enter()
   {

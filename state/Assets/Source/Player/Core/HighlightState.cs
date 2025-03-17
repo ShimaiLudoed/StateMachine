@@ -1,12 +1,13 @@
+using Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HighlightState : AState
+public class HighlightState : AState, INameDebugger
 {
   private GameObject _highlightCircle;
 
-  public HighlightState(StateMachine stateMachine, GameObject highlightCircle) : base(stateMachine)
+  public HighlightState(StateMachine<AState> stateMachine, GameObject highlightCircle) : base(stateMachine)
   {
     this._highlightCircle = highlightCircle;
   }

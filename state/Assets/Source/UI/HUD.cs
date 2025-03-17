@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +13,7 @@ public class HUD : MonoBehaviour
     {
         if (playerState.StateMachine.CurrentState != null)
         {
-            uiText.text = playerState.StateMachine.CurrentState.GetType().Name; 
+            uiText.text = playerState 
         }
     }
 }
